@@ -12,6 +12,7 @@
 body{
     font-size: 18px;
     color: var(--very-dark-cyan);
+    font-family: 'Open Sans', sans-serif;
 }
 a{
     text-decoration: none;
@@ -19,8 +20,10 @@ a{
 }
 .cta{
     background-color: white;
-    padding: .6em 2.4em;
+    padding: .8em 2.4em;
     border-radius: 50px;
+    -webkit-box-shadow: 0px 2px 13px -5px #9E9E9E; 
+    box-shadow: 0px 2px 13px -5px #9E9E9E;
 }
 .hero{
     background-color: var(--very-pale-cyan);
@@ -33,7 +36,7 @@ a{
     margin-bottom: 140px;
 }
 .container{
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -42,6 +45,9 @@ a{
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 2em;
+}
+.hero__nav .cta{
+    font-weight: bold;
 }
 .hero-img{
     height: 5%;
@@ -68,17 +74,24 @@ a{
 .hero__main-figure img{
     width: 100%;
 }
-
 .content__together{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 4em;
-    border: 1px solid silver;
+    -webkit-box-shadow: 0px 2px 13px -5px #9E9E9E; 
+    box-shadow: 0px 2px 13px -5px #9E9E9E;
     padding: 2em;
     margin: 2em 0;
     border-radius: 10px;
+}
+.content__together-title{
+    padding-bottom: .6em;
+    font-family: 'Poppins', sans-serif;
+}
+.content__together-info{
+    color: var(--grayish-blue);
 }
 .content__together-text{
     width: 60%;
@@ -90,16 +103,28 @@ a{
 .content__together-figure img{
     width: 100%;
 }
-
 .left{
     order: 2;
 }
-
-
+.community{
+    width: 50%;
+    margin: 0 auto;
+    padding: 4em 0;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 13px -5px #9E9E9E; 
+    box-shadow: 0px 2px 13px -5px #9E9E9E;
+    bottom: -4em;
+}
+.community h2{
+    padding-bottom: 2em;
+}
 footer{    
     background-color: var(--very-dark-cyan);
     color: white;
-    padding: 2em 0;
+    padding: 4em 0;    
 }
 .footer{
     display: flex;
@@ -114,21 +139,112 @@ footer{
 .footer__links{
     display: flex;
     flex-direction: row;
-    width: 30%;
-    gap: 2em;    
+    width: 35%;
+    gap: 4em;    
 }
-.footer__links-right a{
+.footer__links-right a, .footer__links-left a{
     color: white;
     display: flex;
     flex-direction: column;
     padding: 0 0 .4em 0;
 }
-.footer__links-left a{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 0 0.4em 0;
-}
 .footer-logo{
-    padding: 2em 0;
+    padding: 4em 0 2em 0;
+}
+.footer__info-location, .footer__info-phone, .footer__info-email{
+    display: flex;
+    align-items: center;
+    padding-bottom: .6em;
+}
+.footer__info-location img, .footer__info-phone img, .footer__info-email img{
+    padding-right: 1em;
+}
+.footer__redes img{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: .3em;
+    margin: 0 .2em;
+}
+@media(max-width:1024px){
+    .hero__main{
+        align-items: center;
+    }
+    .hero__main-text{
+        width: 50%;
+    }
+    .hero__main-figure{
+        width: 50%;
+    }
+}
+@media(max-width:920px){
+    .community{
+        width: 80%;
+    }
+}
+@media(max-width:768px){
+    body{
+        font-size: 16px;
+    }
+}
+@media(max-width:680px){
+    .hero__main{
+        flex-direction: column;
+    }
+    .hero__main-text{
+        width: 90%;
+        text-align: center;
+    }
+    .hero__main-figure{
+        width: 90%;
+    }
+    .content__together{
+        flex-direction: column;
+        gap: 2em;
+    }
+    .content__together-text{
+        width: 100%;
+        text-align: center;
+        order: 2;
+        padding: 0;
+    }
+    .content__together-figure{
+        width: 100%;
+    }
+    .community{
+        width: 90%;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer__info{
+        width: 100%;
+    }
+    .footer__links{
+        flex-direction: column;
+        gap: 0;
+        padding: 2em 0;
+        width: 100%;
+    }
+    .footer__links-right a, .footer__links-left a{
+        padding: .4em 0;
+    }
+    .footer__redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media(max-width:500px){
+    body{
+        font-size: 14px;
+    }
+    .hero__nav{
+        align-items: center;
+    }
+    .hero-img{
+        width: 40%;
+    }
+    .hero__nav .cta{
+        padding: .8em 2em;
+    }
 }
